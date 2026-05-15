@@ -1,0 +1,24 @@
+VS Works — Product Vision
+Core Purpose
+
+A premium developer/studio platform that:
+
+showcases your professional work
+builds trust with clients/recruiters
+highlights your technical capabilities
+demonstrates UI/UX quality
+acts as a launchpad for future SaaS products
+
+Recommended Tech Stack
+Frontend
+Next.js 15 (App Router)
+TypeScript
+Tailwind CSS
+Framer Motion
+shadcn/ui
+
+Backend / Data
+
+Initially:
+
+Static + JSON/MDX content
