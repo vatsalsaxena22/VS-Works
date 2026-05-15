@@ -1,36 +1,202 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VS Works
 
-## Getting Started
+VS Works is a modern full-stack portfolio and digital presence platform built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+The platform showcases professional projects, services, development workflow, technical ecosystem, and modern web experiences through a premium monochrome UI inspired by modern SaaS and product websites.
+
+---
+
+## Live Website
+
+https://your-domain.vercel.app
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- shadcn/ui
+
+### Backend / Data
+- Static JSON content
+- EmailJS integration
+
+### Deployment
+- Vercel
+
+---
+
+## Features
+
+- Modern monochrome UI
+- Fully responsive design
+- Dynamic project pages
+- Featured works showcase
+- Services & workflow sections
+- Premium animations & transitions
+- Contact form with EmailJS
+- Modular scalable architecture
+- SEO-ready structure
+- Vercel deployment optimized
+
+---
+
+## Project Structure
+
+```bash
+src/
+├── app/
+│   ├── about/
+│   ├── hire/
+│   ├── services/
+│   ├── works/
+│   │   └── [slug]/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── animations/
+│   ├── layout/
+│   └── sections/
+│       ├── about/
+│       ├── hire/
+│       ├── home/
+│       ├── services/
+│       └── works/
+│
+├── data/
+│   ├── process.ts
+│   ├── projects.ts
+│   └── services.ts
+```
+
+---
+
+## Pages
+
+### Homepage
+- Hero section
+- Featured projects
+- Services preview
+- Workflow preview
+- Tech stack
+- CTA section
+
+### Works
+- Dynamic project showcase
+- Category filtering
+- Project detail pages
+
+### Services
+- Development services
+- Workflow & process
+
+### About
+- Developer introduction
+- Technical stack
+- Ecosystem showcase
+
+### Hire
+- Contact methods
+- Inquiry form
+- EmailJS integration
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
+
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
+
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=YOUR_PUBLIC_KEY
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/vs-works.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is optimized for deployment on:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Vercel
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design Philosophy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+VS Works follows a premium monochrome design system focused on:
+
+- Clean typography
+- Spacious layouts
+- Minimal aesthetics
+- Modern SaaS-inspired UI
+- Scalable frontend architecture
+
+Inspired by platforms like:
+- Vercel
+- Linear
+- Raycast
+
+---
+
+## Future Improvements
+
+- MDX case studies
+- Blog system
+- CMS integration
+- Dark/light theme switcher
+- Advanced motion system
+- Project galleries
+- Admin dashboard
+
+---
+
+## Author
+
+Vatsal Saxena
+
+Full-Stack Developer focused on building scalable, modern, and visually refined digital experiences.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
