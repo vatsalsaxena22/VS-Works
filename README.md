@@ -1,202 +1,66 @@
-# VS Works
+# VSW Research & Development
 
-VS Works is a modern full-stack portfolio and digital presence platform built with Next.js 15, TypeScript, and Tailwind CSS.
+VSW Research & Development is an independent digital studio exploring web technology and building useful websites, web applications, and mobile products. This site presents the studio’s capabilities, selected work, approach, and project inquiry form.
 
-The platform showcases professional projects, services, development workflow, technical ecosystem, and modern web experiences through a premium monochrome UI inspired by modern SaaS and product websites.
+## Live website
 
----
+https://vsworks.vercel.app/
 
-## Live Website
+## Technology
 
-https://your-domain.vercel.app
-
----
-
-## Tech Stack
-
-### Frontend
-- Next.js 15 (App Router)
-- TypeScript
-- Tailwind CSS v4
+- Next.js 16 App Router
+- React 19 and TypeScript
+- Tailwind CSS 4
 - Framer Motion
-- shadcn/ui
+- EmailJS for project inquiries
+- Vercel Analytics
 
-### Backend / Data
-- Static JSON content
-- EmailJS integration
+## Visual system
 
-### Deployment
-- Vercel
+The interface uses a black-and-white palette and a shared, visible grid. Color is reserved for custom SVG artwork that represents research, product systems, and selected work.
 
----
+## Site sections
 
-## Features
+- **Home** — studio introduction, selected projects, capabilities, process, and technology stack.
+- **Work** — category-filtered project cards and individual case study pages.
+- **Services** — websites, web applications, mobile applications, e-commerce, CMS, and product research.
+- **About** — studio principles, technologies, and the research-to-product approach.
+- **Contact** — project inquiry form with EmailJS and direct email fallback.
 
-- Modern monochrome UI
-- Fully responsive design
-- Dynamic project pages
-- Featured works showcase
-- Services & workflow sections
-- Premium animations & transitions
-- Contact form with EmailJS
-- Modular scalable architecture
-- SEO-ready structure
-- Vercel deployment optimized
+Project and service content lives in `src/data/projects.ts`, `src/data/services.ts`, and `src/data/process.ts`.
 
----
-
-## Project Structure
-
-```bash
-src/
-├── app/
-│   ├── about/
-│   ├── hire/
-│   ├── services/
-│   ├── works/
-│   │   └── [slug]/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-│
-├── components/
-│   ├── animations/
-│   ├── layout/
-│   └── sections/
-│       ├── about/
-│       ├── hire/
-│       ├── home/
-│       ├── services/
-│       └── works/
-│
-├── data/
-│   ├── process.ts
-│   ├── projects.ts
-│   └── services.ts
-```
-
----
-
-## Pages
-
-### Homepage
-- Hero section
-- Featured projects
-- Services preview
-- Workflow preview
-- Tech stack
-- CTA section
-
-### Works
-- Dynamic project showcase
-- Category filtering
-- Project detail pages
-
-### Services
-- Development services
-- Workflow & process
-
-### About
-- Developer introduction
-- Technical stack
-- Ecosystem showcase
-
-### Hire
-- Contact methods
-- Inquiry form
-- EmailJS integration
-
----
-
-## Environment Variables
-
-Create a `.env.local` file:
-
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
-
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
-
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=YOUR_PUBLIC_KEY
-```
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/vs-works.git
-```
-
-Install dependencies:
+## Run locally
 
 ```bash
 npm install
-```
-
-Run development server:
-
-```bash
 npm run dev
 ```
 
----
+Open http://localhost:3000.
 
-## Build
+## EmailJS configuration
+
+Set these variables in `.env.local` and in the deployment environment:
+
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+The EmailJS template should include `user_name`, `user_email`, and `message`. The selected project type is added to the start of `message` so existing templates continue to receive it.
+
+If EmailJS is not configured, the form displays a message directing visitors to `hello@vsworks.dev`.
+
+## Production
 
 ```bash
 npm run build
+npm run start
 ```
 
----
+The project is configured for Vercel deployment. Add the EmailJS variables to the project’s Vercel environment settings before publishing the contact form.
 
-## Deployment
-
-This project is optimized for deployment on:
-
-- Vercel
-
----
-
-## Design Philosophy
-
-VS Works follows a premium monochrome design system focused on:
-
-- Clean typography
-- Spacious layouts
-- Minimal aesthetics
-- Modern SaaS-inspired UI
-- Scalable frontend architecture
-
-Inspired by platforms like:
-- Vercel
-- Linear
-- Raycast
-
----
-
-## Future Improvements
-
-- MDX case studies
-- Blog system
-- CMS integration
-- Dark/light theme switcher
-- Advanced motion system
-- Project galleries
-- Admin dashboard
-
----
-
-## Author
+## Maintainer
 
 Vatsal Saxena
-
-Full-Stack Developer focused on building scalable, modern, and visually refined digital experiences.
-
----
-
-## License
-
-This project is licensed under the MIT License.

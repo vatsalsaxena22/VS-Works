@@ -8,7 +8,7 @@ import CTA from "@/components/sections/home/CTA";
 
 export default function HomePage() {
   return (
-    <main className="bg-background text-foreground">
+    <main id="main" className="bg-transparent text-foreground">
       <Hero />
       <FeaturedWorks />
       <ServicesPreview />

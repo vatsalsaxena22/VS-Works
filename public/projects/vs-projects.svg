@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="84" y1="54" x2="1087" y2="735" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17192A"/>
+      <stop offset="1" stop-color="#090B12"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="706" y1="138" x2="1103" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6DC7FF"/>
+      <stop offset="1" stop-color="#5264D8"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#C9D6FF" fill-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="750" rx="32" fill="url(#bg)"/>
+  <rect width="1200" height="750" rx="32" fill="url(#dots)"/>
+  <circle cx="916" cy="362" r="226" fill="#6ABFFF" fill-opacity=".09"/>
+  <rect x="650" y="148" width="454" height="436" rx="24" fill="#101522" stroke="#D7E5FF" stroke-opacity=".2"/>
+  <rect x="650" y="148" width="454" height="50" rx="24" fill="#1C2433"/>
+  <path d="M650 174a26 26 0 0 1 26-26h402a26 26 0 0 1 26 26v24H650v-24Z" fill="#1C2433"/>
+  <circle cx="678" cy="173" r="5" fill="#F08A8A"/>
+  <circle cx="698" cy="173" r="5" fill="#EDC679"/>
+  <circle cx="718" cy="173" r="5" fill="#83D7A4"/>
+  <rect x="671" y="218" width="412" height="178" rx="14" fill="#18243A"/>
+  <path d="M672 369c70-53 132-48 191-7 71 50 129 20 220-102v136H672v-27Z" fill="url(#glow)" fill-opacity=".68"/>
+  <path d="M672 345c86-102 145-74 203-18 54 52 125 33 208-75" stroke="#C3E9FF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="673" y="417" width="185" height="12" rx="6" fill="#E8EDF8" fill-opacity=".86"/>
+  <rect x="673" y="444" width="321" height="8" rx="4" fill="#A5B2C8" fill-opacity=".45"/>
+  <rect x="673" y="462" width="272" height="8" rx="4" fill="#A5B2C8" fill-opacity=".28"/>
+  <rect x="673" y="500" width="117" height="39" rx="19.5" fill="#DDEEFF"/>
+  <text x="698" y="525" fill="#182237" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">VIEW PROJECT</text>
+  <text x="76" y="99" fill="#9DDCFF" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5">SELECTED WORK · 2025</text>
+  <text x="76" y="289" fill="#F5F7FF" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">VS PROJECTS</text>
+  <text x="76" y="372" fill="#F5F7FF" font-family="Arial, sans-serif" font-size="62" font-weight="700">Ideas into</text>
+  <text x="76" y="445" fill="#F5F7FF" font-family="Arial, sans-serif" font-size="62" font-weight="700">interfaces.</text>
+  <text x="78" y="497" fill="#BFC9DC" font-family="Arial, sans-serif" font-size="20">Frontend experiments · Digital products</text>
+  <rect x="76" y="548" width="174" height="46" rx="23" fill="#DFEFFF"/>
+  <text x="102" y="577" fill="#1A2D46" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">EXPLORE PROJECT</text>
+</svg>

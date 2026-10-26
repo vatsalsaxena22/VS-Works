@@ -1,5 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -7,7 +8,8 @@ interface ProjectCardProps {
   category: string;
   year: string;
   slug: string;
-  image?: string;
+  image: string;
+  imageAlt: string;
 }
 
 export default function ProjectCard({
@@ -17,63 +19,48 @@ export default function ProjectCard({
   year,
   slug,
   image,
+  imageAlt,
 }: ProjectCardProps) {
   return (
     <Link
       href={`/works/${slug}`}
-      className="group block overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:border-white/20"
+      aria-label={`View the ${title} case study`}
+      className="group block h-full overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[#0a0a0a] transition duration-500 hover:-translate-y-1 hover:border-white/25 hover:bg-[#0c0c0c] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
     >
-      {/* Thumbnail */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-zinc-950">
-        
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#101010]">
         <Image
-          src={
-            image?.trim()
-              ? image
-              : `https://placehold.co/1200x750/0a0a0a/ffffff?text=${encodeURIComponent(title)}`
-          }
-          alt={title}
+          src={image}
+          alt={imageAlt}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           unoptimized
-          className="object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+          className="object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
         />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-
-        {/* Floating Label */}
-        <div className="absolute left-6 top-6">
-          <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-md">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute left-5 top-5">
+          <span className="rounded-full border border-white/15 bg-black/40 px-3.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-200 backdrop-blur-md">
             {category}
           </span>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="space-y-6 p-8">
-        
-        {/* Meta */}
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-zinc-500">
-            {year}
-          </span>
-
-          <span className="text-sm text-zinc-600 transition group-hover:text-zinc-400">
-            View →
+      <div className="p-6 sm:p-8">
+        <div className="flex items-center justify-between gap-4 text-xs text-zinc-500">
+          <span>{year}</span>
+          <span className="inline-flex items-center gap-2 transition-colors group-hover:text-white">
+            View case study
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </span>
         </div>
 
-        {/* Title */}
-        <div>
-          <h3 className="text-3xl font-semibold leading-tight tracking-tight text-white transition duration-500 group-hover:translate-x-1">
+        <div className="mt-5">
+          <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             {title}
           </h3>
-
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-400">
+          <p className="mt-3 max-w-xl text-sm leading-7 text-zinc-400 sm:text-base">
             {description}
           </p>
         </div>
-
       </div>
     </Link>
   );

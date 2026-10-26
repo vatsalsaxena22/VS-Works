@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="58" x2="1090" y2="724" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B25"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="654" y1="204" x2="1072" y2="606" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DD7A6"/>
+      <stop offset="1" stop-color="#2C7C5A"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#D5F5E1" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="750" rx="32" fill="url(#bg)"/>
+  <rect width="1200" height="750" rx="32" fill="url(#grid)"/>
+  <circle cx="898" cy="370" r="226" fill="#54B982" fill-opacity=".08"/>
+  <circle cx="898" cy="370" r="164" stroke="#9FE2B4" stroke-opacity=".14"/>
+  <path d="M904 221c-115 16-190 100-178 194 11 83 88 126 178 105 87-20 150-102 146-196-3-68-55-116-146-103Z" fill="url(#leaf)" fill-opacity=".92"/>
+  <path d="M764 528c70-114 161-209 280-290M863 404l-11-97M925 354l85-12M819 462l-78 2M909 432l93 66" stroke="#E4F7E9" stroke-opacity=".82" stroke-width="8" stroke-linecap="round"/>
+  <path d="M0 599c165-41 290-40 416 9 124 49 233 70 364 35 151-40 263-40 420 10v97H0V599Z" fill="#0E2A20" fill-opacity=".8"/>
+  <text x="76" y="99" fill="#A4DDB4" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5">SELECTED WORK · 2025</text>
+  <text x="76" y="289" fill="#F4FAF5" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">SHAKTISHILA</text>
+  <text x="76" y="372" fill="#F4FAF5" font-family="Arial, sans-serif" font-size="62" font-weight="700">Powering a</text>
+  <text x="76" y="445" fill="#F4FAF5" font-family="Arial, sans-serif" font-size="62" font-weight="700">circular future.</text>
+  <text x="78" y="497" fill="#B9C9BE" font-family="Arial, sans-serif" font-size="20">Renewable energy · Sustainable bioenergy</text>
+  <rect x="76" y="548" width="174" height="46" rx="23" fill="#DDF4E2"/>
+  <text x="102" y="577" fill="#163D2A" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">EXPLORE PROJECT</text>
+</svg>

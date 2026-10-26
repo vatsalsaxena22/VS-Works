@@ -1,24 +1,34 @@
-VS Works — Product Vision
-Core Purpose
+VSW Research & Development — Product Brief
 
-A premium developer/studio platform that:
+Purpose
 
-showcases your professional work
-builds trust with clients/recruiters
-highlights your technical capabilities
-demonstrates UI/UX quality
-acts as a launchpad for future SaaS products
+Present VSW as an independent digital product studio exploring web technology and building practical websites, web applications, and mobile products. The site should explain the studio’s approach, show selected work, and make project enquiries straightforward.
 
-Recommended Tech Stack
-Frontend
-Next.js 15 (App Router)
-TypeScript
-Tailwind CSS
-Framer Motion
-shadcn/ui
+Audience
 
-Backend / Data
+Founders, teams, and businesses with a digital product idea, a website to improve, or a workflow that could be made easier with software.
 
-Initially:
+Capabilities
 
-Static + JSON/MDX content
+- Websites and digital platforms
+- Web applications and SaaS products
+- Mobile application experiences
+- E-commerce and content-managed websites
+- Technical discovery, product research, and prototypes
+
+Product principles
+
+- Start from user needs and project constraints.
+- Choose technology to fit the problem.
+- Make the experience clear, responsive, and accessible.
+- Build a useful first release that can be maintained and extended.
+
+Current implementation
+
+- Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS 4.
+- Static project and service data in `src/data/`.
+- Project index and dynamic case-study routes.
+- EmailJS project inquiry form with environment-based configuration.
+- Vercel deployment and analytics.
+
+The live information architecture and source layout are documented in [folder-structure.md](./folder-structure.md).

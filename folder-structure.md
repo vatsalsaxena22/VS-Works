@@ -1,57 +1,45 @@
+# Current project structure
+
+```text
 src/
-│
 ├── app/
+│   ├── about/page.tsx
+│   ├── hire/page.tsx
+│   ├── services/page.tsx
 │   ├── works/
-│   ├── services/
-│   ├── about/
-│   ├── hire/
-│   └── layout.tsx
-│
+│   │   ├── [slug]/page.tsx
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   └── page.tsx
 ├── components/
-│   ├── ui/
+│   ├── animations/
 │   ├── layout/
-│   ├── sections/
-│   └── animations/
-│
-├── content/
-│   ├── projects/
-│   └── services/
-│
-├── data/
-│
-├── lib/
-│
-├── styles/
-│
-├── types/
-│
-└── constants/
+│   └── sections/
+│       ├── about/
+│       ├── hire/
+│       ├── home/
+│       ├── services/
+│       └── works/
+└── data/
+    ├── process.ts
+    ├── projects.ts
+    └── services.ts
 
-Best Development Flow
-Step 1
+public/
+├── imgs/       # VSW brand marks
+├── projects/   # Local portfolio artwork and previews
+└── visuals/    # Multicolor research and product SVGs
+```
 
-Initialize project.
+## Data flow
 
-Step 2
+- Static project, service, and process content is maintained in `src/data/`.
+- The works index and dynamic case study pages read from the same project list.
+- The contact form submits to EmailJS using the environment variables documented in [README.md](./README.md).
+- The root layout provides the VSW identity, site metadata, navigation, footer, and analytics.
 
-Setup Tailwind + shadcn/ui.
+## Runtime
 
-Step 3
-
-Create layout system.
-
-Step 4
-
-Build homepage.
-
-Step 5
-
-Add works CMS structure.
-
-Step 6
-
-Add animations.
-
-Step 7
-
-SEO optimization.
+The app uses the Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, and Framer Motion. Page routes are server components by default; interactive navigation, category filters, animations, and the inquiry form are client components.

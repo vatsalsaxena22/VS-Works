@@ -1,98 +1,97 @@
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 
-const ecosystem = [
+const pillars = [
   {
-    title: "VS Portfolio",
-    stack: ["HTML", "Custom CSS", "Vanilla JS"],
+    number: "01",
+    title: "Explore",
+    label: "Research",
     description:
-      "My personal portfolio showcasing skills, experience, and development journey.",
-    status: "Live",
+      "Investigate user needs, emerging tools, and technical options to find a promising direction.",
+    tags: ["Discovery", "Technical research", "Product thinking"],
   },
-
   {
-    title: "VS Projects",
-    stack: ["React", "Vite", "Bootstrap 5"],
+    number: "02",
+    title: "Prototype",
+    label: "Experiment",
     description:
-      "A curated showcase of all my personal and professional web development projects.",
-    status: "Live",
+      "Make ideas tangible with interface studies and working prototypes that help teams learn sooner.",
+    tags: ["Proof of concept", "UI systems", "Validation"],
   },
-
   {
-    title: "VS Works",
-    stack: ["Coming Soon"],
+    number: "03",
+    title: "Build",
+    label: "Develop",
     description:
-      "An upcoming platform focused on creative work, development experiments, and digital products.",
-    status: "In Progress",
+      "Turn a validated direction into a polished, maintainable product that is ready to keep evolving.",
+    tags: ["Websites", "Web apps", "Mobile products"],
   },
 ];
 
 export default function Ecosystem() {
   return (
-    <section className="py-40">
+    <section className="py-24 sm:py-32" aria-labelledby="pillars-heading">
       <Container>
-
-        <div className="mb-20 max-w-4xl">
-          
-          <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-            My Ecosystem
-          </p>
-
-          <h2 className="mt-6 text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            My Tech
-            <br />
-            Trio
-          </h2>
-
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
-            A collection of platforms and projects
-            representing my work, portfolio,
-            and development journey.
-          </p>
-
+        <div className="mb-12 grid gap-8 sm:mb-14 md:grid-cols-[1fr_0.7fr] md:items-end">
+          <div className="max-w-3xl">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/80">
+              Research &amp; development
+            </p>
+            <h2
+              id="pillars-heading"
+              className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.05em] text-white sm:text-5xl md:text-6xl"
+            >
+              Explore. Test. Build.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400">
+              Curiosity gives us room to explore. A clear process helps us turn
+              what we learn into useful digital products.
+            </p>
+          </div>
+          <div className="relative mx-auto aspect-[2.7/1] w-full max-w-[480px] md:justify-self-end">
+            <Image
+              src="/visuals/rnd-flow.svg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 480px"
+              className="object-contain"
+            />
+          </div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {ecosystem.map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04]"
+        <div className="grid gap-4 lg:grid-cols-3">
+          {pillars.map((pillar) => (
+            <article
+              key={pillar.number}
+              className="rounded-[1.5rem] border border-white/[0.08] bg-[#0a0a0a] p-6 sm:p-8"
             >
-              
               <div className="flex items-center justify-between">
-                
-                <span className="text-sm text-zinc-600">
-                  {item.status}
+                <span className="text-xs tracking-[0.16em] text-white/70">
+                  {pillar.number}
                 </span>
-
-                <span className="text-white/40 transition group-hover:text-white/70">
-                  →
+                <span className="rounded-full border border-white/[0.08] px-3 py-1.5 text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                  {pillar.label}
                 </span>
-
               </div>
-
-              <h3 className="mt-10 text-3xl font-semibold tracking-tight">
-                {item.title}
+              <h3 className="mt-10 text-2xl font-semibold tracking-tight text-white">
+                {pillar.title}
               </h3>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {item.stack.map((tech) => (
+              <p className="mt-3 text-sm leading-7 text-zinc-400">
+                {pillar.description}
+              </p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {pillar.tags.map((tag) => (
                   <span
-                    key={tech}
-                    className="rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400"
+                    key={tag}
+                    className="rounded-full border border-white/[0.08] px-3 py-1.5 text-[11px] text-zinc-500"
                   >
-                    {tech}
+                    {tag}
                   </span>
                 ))}
               </div>
-
-              <p className="mt-8 leading-relaxed text-zinc-400">
-                {item.description}
-              </p>
-
-            </div>
+            </article>
           ))}
         </div>
-
       </Container>
     </section>
   );

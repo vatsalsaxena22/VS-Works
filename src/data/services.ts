@@ -1,31 +1,32 @@
 export const services = [
   {
-    title: "Web Development",
+    title: "Websites & Digital Platforms",
     description:
-      "Modern responsive websites built for performance, scalability, and premium user experiences.",
+      "Fast, responsive websites that give your business a clear story, a confident first impression, and room to grow.",
   },
-
   {
-    title: "WordPress Development",
+    title: "Web Applications & SaaS",
     description:
-      "Custom WordPress solutions with optimized performance, flexible architecture, and clean UI systems.",
+      "Custom dashboards, portals, and product experiences that turn complex workflows into simple, useful software.",
   },
-
   {
-    title: "WooCommerce Development",
+    title: "Mobile Applications",
     description:
-      "Scalable e-commerce platforms with modern storefronts, payment integrations, and conversion-focused design.",
+      "Thoughtful mobile product experiences for iOS and Android, planned around real user needs and practical delivery.",
   },
-
   {
-    title: "PHP Web Applications",
+    title: "E-commerce",
     description:
-      "Dynamic PHP applications tailored for business systems, dashboards, and custom workflows.",
+      "Storefronts and commerce flows designed to make product discovery, checkout, and day-to-day management easier.",
   },
-
   {
-    title: "MERN Web Applications",
+    title: "WordPress & CMS",
     description:
-      "Full-stack applications using MongoDB, Express.js, React, and Node.js with modern frontend architecture.",
+      "Flexible content-managed websites with a tailored visual system and the tools your team needs to keep them current.",
+  },
+  {
+    title: "Product Research & Prototyping",
+    description:
+      "Technical discovery, interface experiments, and working prototypes that help validate an idea before a full build.",
   },
 ];

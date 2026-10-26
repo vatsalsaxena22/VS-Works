@@ -1,60 +1,50 @@
-import Container from "@/components/layout/Container";
 import Link from "next/link";
+import { ArrowUpRight, CodeXml, Mail, MessageSquareText } from "lucide-react";
+import Container from "@/components/layout/Container";
 
-const contacts = [
-  {
-    title: "Email",
-    value: "hello@vsworks.dev",
-    href: "mailto:hello@vsworks.dev",
-  },
-
-  {
-    title: "GitHub",
-    value: "github.com/vatsalsaxena22",
-    href: "https://github.com/vatsalsaxena22",
-  },
-
-  {
-    title: "LinkedIn",
-    value: "linkedin.com/in/vatsalsaxena",
-    href: "https://linkedin.com",
-  },
-];
+const cardClassName =
+  "group rounded-2xl border border-white/[0.08] bg-[#0a0a0a] p-6 transition duration-300 hover:border-white/20 hover:bg-[#0c0c0c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:p-7";
 
 export default function ContactMethods() {
   return (
-    <section className="pb-24">
+    <section className="pb-16 sm:pb-20" aria-label="Contact options">
       <Container>
+        <div className="grid gap-3 md:grid-cols-3">
+          <a
+            href="mailto:hello@vsworks.dev"
+            className={cardClassName}
+          >
+            <div className="flex items-center justify-between">
+              <Mail className="size-5 text-white" aria-hidden="true" />
+              <ArrowUpRight className="size-4 text-zinc-600 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
+            </div>
+            <p className="mt-8 text-xs uppercase tracking-[0.18em] text-zinc-500">Email</p>
+            <p className="mt-2 break-all text-lg font-medium text-white">hello@vsworks.dev</p>
+          </a>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {contacts.map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              target="_blank"
-              className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.04]"
-            >
-              
-              <div className="flex items-center justify-between">
-                
-                <p className="text-sm text-zinc-500">
-                  {item.title}
-                </p>
+          <a
+            href="https://github.com/vatsalsaxena22"
+            target="_blank"
+            rel="noreferrer"
+            className={cardClassName}
+          >
+            <div className="flex items-center justify-between">
+              <CodeXml className="size-5 text-white" aria-hidden="true" />
+              <ArrowUpRight className="size-4 text-zinc-600 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
+            </div>
+            <p className="mt-8 text-xs uppercase tracking-[0.18em] text-zinc-500">Code &amp; experiments</p>
+            <p className="mt-2 text-lg font-medium text-white">GitHub</p>
+          </a>
 
-                <span className="text-white/40 transition group-hover:text-white/70">
-                  →
-                </span>
-
-              </div>
-
-              <p className="mt-10 text-xl font-medium tracking-tight text-white">
-                {item.value}
-              </p>
-
-            </Link>
-          ))}
+          <Link href="#project-form" className={cardClassName}>
+            <div className="flex items-center justify-between">
+              <MessageSquareText className="size-5 text-white" aria-hidden="true" />
+              <ArrowUpRight className="size-4 text-zinc-600 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden="true" />
+            </div>
+            <p className="mt-8 text-xs uppercase tracking-[0.18em] text-zinc-500">Have a brief?</p>
+            <p className="mt-2 text-lg font-medium text-white">Send a project inquiry</p>
+          </Link>
         </div>
-
       </Container>
     </section>
   );

@@ -6,44 +6,52 @@ const stack = [
   "React",
   "Tailwind CSS",
   "Node.js",
+  "Express",
   "MongoDB",
+  "PHP",
   "WordPress",
   "WooCommerce",
+  "JavaScript",
+  "Git",
 ];
 
 export default function TechStack() {
   return (
-    <section className="relative border-y border-white/10 py-40">
-      
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03),transparent_60%)]" />
-
+    <section className="relative overflow-hidden border-y border-white/[0.08] py-24 sm:py-32" aria-labelledby="technology-heading">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_85%_50%,rgba(255,255,255,0.04),transparent_45%)]" />
       <Container>
-
-        <div className="mb-20 max-w-3xl">
-          
-          <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-            Stack
-          </p>
-
-          <h2 className="mt-6 text-5xl font-semibold tracking-tight md:text-7xl">
-            Technologies
-            <br />
-            & Systems
-          </h2>
-
-        </div>
-
-        <div className="flex flex-wrap gap-4">
-          {stack.map((item) => (
-            <div
-              key={item}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm text-zinc-300"
+        <div className="relative grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="max-w-xl">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/80">
+              Tools for the work
+            </p>
+            <h2
+              id="technology-heading"
+              className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.05em] text-white sm:text-5xl md:text-6xl"
             >
-              {item}
-            </div>
-          ))}
-        </div>
+              A flexible technology stack.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-zinc-400">
+              The right tools depend on the problem. We choose technologies to
+              fit the product, the team, and the next stage of growth.
+            </p>
+          </div>
 
+          <div className="flex flex-wrap gap-2.5">
+            {stack.map((item, index) => (
+              <span
+                key={item}
+                className={`rounded-full border px-4 py-2.5 text-sm transition hover:border-white/30 hover:text-white ${
+                  index < 4
+                    ? "border-white/15 bg-white/[0.06] text-zinc-200"
+                    : "border-white/[0.09] bg-white/[0.025] text-zinc-400"
+                }`}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

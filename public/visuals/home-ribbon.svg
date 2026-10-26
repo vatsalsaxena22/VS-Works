@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+  <defs>
+    <linearGradient id="ribbonA" x1="117" y1="403" x2="760" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB862"/>
+      <stop offset=".34" stop-color="#FF668F"/>
+      <stop offset=".68" stop-color="#9C72FF"/>
+      <stop offset="1" stop-color="#47DCCC"/>
+    </linearGradient>
+    <linearGradient id="ribbonB" x1="154" y1="126" x2="812" y2="374" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#52DDC9"/>
+      <stop offset=".42" stop-color="#6C8DFF"/>
+      <stop offset=".72" stop-color="#BF71FF"/>
+      <stop offset="1" stop-color="#FFB967"/>
+    </linearGradient>
+    <radialGradient id="mist" cx="0" cy="0" r="1" gradientTransform="matrix(303 0 0 181 461 260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A675FF" stop-opacity=".3"/>
+      <stop offset=".53" stop-color="#46DCCB" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bloom" x="28" y="35" width="844" height="449" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="21"/>
+    </filter>
+  </defs>
+  <ellipse cx="461" cy="260" rx="303" ry="181" fill="url(#mist)"/>
+  <path d="M107 352c103-109 206-171 300-160 96 11 142 115 236 108 49-4 91-35 150-99" stroke="url(#ribbonA)" stroke-width="44" stroke-linecap="round" opacity=".35" filter="url(#bloom)"/>
+  <path d="M107 352c103-109 206-171 300-160 96 11 142 115 236 108 49-4 91-35 150-99" stroke="url(#ribbonA)" stroke-width="15" stroke-linecap="round" opacity=".82"/>
+  <path d="M112 177c97 20 173 108 269 137 103 32 176 8 253-63 36-33 71-56 125-65" stroke="url(#ribbonB)" stroke-width="32" stroke-linecap="round" opacity=".28" filter="url(#bloom)"/>
+  <path d="M112 177c97 20 173 108 269 137 103 32 176 8 253-63 36-33 71-56 125-65" stroke="url(#ribbonB)" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+  <path d="M173 423c79-36 148-41 211-14 73 31 136 30 204-4 48-24 90-57 137-95" stroke="#F8DAFF" stroke-opacity=".45" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="107" cy="352" r="8" fill="#FFC36E"/>
+  <circle cx="343" cy="195" r="7" fill="#FF799F"/>
+  <circle cx="643" cy="300" r="8" fill="#A978FF"/>
+  <circle cx="793" cy="201" r="7" fill="#53E0CE"/>
+  <circle cx="218" cy="148" r="3" fill="#fff" fill-opacity=".8"/>
+  <circle cx="705" cy="380" r="3" fill="#fff" fill-opacity=".76"/>
+  <circle cx="475" cy="94" r="2.5" fill="#fff" fill-opacity=".72"/>
+  <circle cx="314" cy="441" r="2.5" fill="#fff" fill-opacity=".62"/>
+</svg>

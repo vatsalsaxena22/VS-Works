@@ -1,59 +1,55 @@
 import Container from "@/components/layout/Container";
 
 const skills = [
-  "HTML",
-  "CSS",
+  "Next.js",
+  "React",
+  "TypeScript",
   "JavaScript",
-  "W3.css",
-  "W3.js",
-  "Git",
-  "GitHub",
-  "Hostinger",
-  "Google Sites",
-  "Blogger",
-  "WordPress",
-  "Bootstrap 5",
+  "HTML & CSS",
   "Tailwind CSS",
-  "React.js",
   "Node.js",
   "Express.js",
   "MongoDB",
+  "PHP",
+  "WordPress",
+  "WooCommerce",
+  "Bootstrap",
+  "Git & GitHub",
 ];
 
 export default function Skills() {
   return (
-    <section className="relative border-y border-white/10 py-40">
-      
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03),transparent_60%)]" />
-
+    <section className="relative overflow-hidden border-y border-white/[0.08] py-24 sm:py-32" aria-labelledby="skills-heading">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_78%_50%,rgba(255,255,255,0.035),transparent_46%)]" />
       <Container>
-
-        <div className="mb-20 max-w-3xl">
-          
-          <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-            Skills & Technologies
-          </p>
-
-          <h2 className="mt-6 text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Technical
-            <br />
-            Stack
-          </h2>
-
-        </div>
-
-        <div className="flex flex-wrap gap-4">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-6 py-3 text-sm text-zinc-300 transition hover:border-white/20 hover:bg-white/[0.05]"
+        <div className="relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="max-w-xl">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/80">
+              Technologies
+            </p>
+            <h2
+              id="skills-heading"
+              className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.05em] text-white sm:text-5xl"
             >
-              {skill}
-            </div>
-          ))}
-        </div>
+              The tools behind the work.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-zinc-400">
+              A practical full-stack toolkit for building, integrating, and
+              maintaining digital products.
+            </p>
+          </div>
 
+          <div className="flex flex-wrap gap-2.5">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-white/[0.09] bg-white/[0.025] px-4 py-2.5 text-sm text-zinc-300 transition hover:border-white/25 hover:bg-white/[0.05] hover:text-white"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

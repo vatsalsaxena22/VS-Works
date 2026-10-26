@@ -1,54 +1,30 @@
 export const projects = [
   {
     slug: "shaktishila",
-
     title: "Shaktishila",
-
     description:
-      "Renewable energy platform focused on biowaste and sustainable energy solutions.",
-
+      "A digital home for renewable energy and sustainable bioenergy solutions.",
     overview:
-      "A modern corporate platform designed for renewable energy consulting and sustainable bioenergy solutions.",
-
+      "A corporate website that introduces Shaktishila’s work in biowaste and sustainable energy, with a clear path for visitors to learn more and get in touch.",
     category: "WordPress",
-
     year: "2025",
-
     href: "https://shaktishila.in",
-
-    image: "/projects/one.png",
-
-    stack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "WordPress",
-    ],
+    image: "/projects/shaktishila.svg",
+    imageAlt: "Shaktishila renewable energy website concept preview",
+    stack: ["HTML", "CSS", "JavaScript", "WordPress"],
   },
-
   {
     slug: "vs-projects",
-
     title: "VS Projects",
-
     description:
-      "Modern developer showcase platform for experiments, UI systems, and web applications.",
-
+      "A developer showcase for experiments, interface systems, and web applications.",
     overview:
-      "A premium showcase platform for frontend experiments, reusable systems, and developer-focused projects.",
-
+      "A curated project platform for presenting frontend experiments and product work through a focused, responsive interface.",
     category: "Frontend",
-
     year: "2025",
-
     href: "https://vatsalsaxena-projects.netlify.app",
-
-    image: "/projects/one.png",
-
-    stack: [
-      "React",
-      "Tailwind CSS",
-      "Vite",
-    ],
+    image: "/projects/vs-projects.svg",
+    imageAlt: "VS Projects portfolio interface concept preview",
+    stack: ["React", "Tailwind CSS", "Vite"],
   },
 ];
