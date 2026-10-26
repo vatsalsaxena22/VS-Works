@@ -25,9 +25,9 @@ export default function ProjectCard({
     <Link
       href={`/works/${slug}`}
       aria-label={`View the ${title} case study`}
-      className="group block h-full overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[#0a0a0a] transition duration-500 hover:-translate-y-1 hover:border-white/25 hover:bg-[#0c0c0c] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      className="group block h-full overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[#0a0f15] transition duration-500 hover:-translate-y-1 hover:border-white/25 hover:bg-[#101820] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#101010]">
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#101820]">
         <Image
           src={image}
           alt={imageAlt}

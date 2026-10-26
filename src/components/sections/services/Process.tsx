@@ -27,7 +27,7 @@ export default function Process() {
           {process.map((step) => (
             <article
               key={step.number}
-              className="rounded-2xl border border-white/[0.08] bg-[#090909]/80 p-5 sm:p-6"
+              className="rounded-2xl border border-white/[0.08] bg-[#090e14]/80 p-5 sm:p-6"
             >
               <p className="text-xs tracking-[0.16em] text-white/70">
                 {step.number}

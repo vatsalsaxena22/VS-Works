@@ -32,7 +32,7 @@ export default function ProcessPreview() {
           {process.map((step) => (
             <div
               key={step.number}
-              className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0b0b0b] p-5 sm:p-6"
+              className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0c121a] p-5 sm:p-6"
             >
               <p className="text-xs font-medium tracking-[0.16em] text-white/70">
                 {step.number}

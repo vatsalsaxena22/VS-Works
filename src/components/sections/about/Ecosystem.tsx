@@ -63,7 +63,7 @@ export default function Ecosystem() {
           {pillars.map((pillar) => (
             <article
               key={pillar.number}
-              className="rounded-[1.5rem] border border-white/[0.08] bg-[#0a0a0a] p-6 sm:p-8"
+              className="rounded-[1.5rem] border border-white/[0.08] bg-[#0a0f15] p-6 sm:p-8"
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs tracking-[0.16em] text-white/70">

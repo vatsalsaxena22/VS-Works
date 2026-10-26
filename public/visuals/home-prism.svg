@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="680" height="540" viewBox="0 0 680 540" fill="none">
   <defs>
     <radialGradient id="wash" cx="0" cy="0" r="1" gradientTransform="matrix(248 0 0 208 338 264)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#A66DFF" stop-opacity=".32"/>
-      <stop offset=".56" stop-color="#44D8C4" stop-opacity=".15"/>
-      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+      <stop stop-color="#7E9DDB" stop-opacity=".3"/>
+      <stop offset=".56" stop-color="#71C7D6" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#0A1017" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="glassA" x1="159" y1="117" x2="377" y2="403" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFBC69" stop-opacity=".82"/>
-      <stop offset=".52" stop-color="#F45C9B" stop-opacity=".68"/>
-      <stop offset="1" stop-color="#8B72FF" stop-opacity=".42"/>
+      <stop stop-color="#D9ECFF" stop-opacity=".82"/>
+      <stop offset=".52" stop-color="#8CCBEA" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#A8BBE8" stop-opacity=".42"/>
     </linearGradient>
     <linearGradient id="glassB" x1="348" y1="108" x2="535" y2="401" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#48E0CB" stop-opacity=".8"/>
-      <stop offset=".52" stop-color="#688BFF" stop-opacity=".62"/>
-      <stop offset="1" stop-color="#B873FF" stop-opacity=".42"/>
+      <stop stop-color="#82DDE2" stop-opacity=".8"/>
+      <stop offset=".52" stop-color="#91BDF4" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#CBD9F5" stop-opacity=".42"/>
     </linearGradient>
     <linearGradient id="highlight" x1="201" y1="155" x2="456" y2="345" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF3D7"/>
-      <stop offset=".48" stop-color="#FF8DB5"/>
-      <stop offset="1" stop-color="#6AF0D4"/>
+      <stop stop-color="#F2FAFF"/>
+      <stop offset=".48" stop-color="#BDE8F4"/>
+      <stop offset="1" stop-color="#79DDE4"/>
     </linearGradient>
     <filter id="blur" x="82" y="48" width="520" height="444" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="24"/>
@@ -36,10 +36,10 @@
   <path d="m172 319 117 70 117-70 116-69" stroke="url(#highlight)" stroke-opacity=".76" stroke-width="2"/>
   <path d="m222 147 116 68 117-68m-167 214V216m117 103V174" stroke="#fff" stroke-opacity=".42" stroke-width="1.5"/>
   <path d="M209 287c42-81 105-121 177-113 48 5 84 32 113 81" stroke="url(#highlight)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-  <path d="M221 320c55 38 121 45 184 13 36-18 63-42 85-78" stroke="#B9FFF0" stroke-opacity=".62" stroke-width="1.5" stroke-linecap="round" filter="url(#soft)"/>
-  <circle cx="209" cy="287" r="5" fill="#FFCB7A"/>
-  <circle cx="499" cy="255" r="5" fill="#64E7D2"/>
+  <path d="M221 320c55 38 121 45 184 13 36-18 63-42 85-78" stroke="#D6F5FF" stroke-opacity=".62" stroke-width="1.5" stroke-linecap="round" filter="url(#soft)"/>
+  <circle cx="209" cy="287" r="5" fill="#D9ECFF"/>
+  <circle cx="499" cy="255" r="5" fill="#7EDDE4"/>
   <circle cx="338" cy="215" r="4" fill="#fff" fill-opacity=".9"/>
-  <circle cx="406" cy="319" r="4" fill="#FF8DB5"/>
+  <circle cx="406" cy="319" r="4" fill="#B7CBF4"/>
   <circle cx="338" cy="273" r="146" stroke="#fff" stroke-opacity=".08"/>
 </svg>

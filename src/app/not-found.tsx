@@ -27,7 +27,7 @@ export default function NotFound() {
             </Link>
             <Link
               href="/works"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/[0.04] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               View selected work
               <ArrowUpRight className="size-4" />

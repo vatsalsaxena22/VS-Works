@@ -45,7 +45,7 @@ export default function AboutIntro() {
             </div>
           </div>
 
-          <div className="rounded-[1.75rem] border border-white/[0.09] bg-[#0b0b0b] p-6 sm:p-8">
+          <div className="rounded-[1.75rem] border border-white/[0.09] bg-[#0c121a] p-6 sm:p-8">
             <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-500">
               Working principles
             </p>

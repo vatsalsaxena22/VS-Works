@@ -13,7 +13,7 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <article className="group flex h-full flex-col rounded-[1.5rem] border border-white/[0.08] bg-[#0a0a0a] p-6 transition duration-300 hover:border-white/20 hover:bg-[#0c0c0c] sm:p-7">
+    <article className="group flex h-full flex-col rounded-[1.5rem] border border-white/[0.08] bg-[#0a0f15] p-6 transition duration-300 hover:border-white/20 hover:bg-[#101820] sm:p-7">
       <div className="flex items-center justify-between">
         <span className="text-[10px] tracking-[0.16em] text-white/70">
           {number}

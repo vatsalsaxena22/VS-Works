@@ -50,52 +50,52 @@
 
 :root {
   color-scheme: dark;
-  --background: #050505;
-  --foreground: #fafafa;
+  --background: #070a0f;
+  --foreground: #f3f7fd;
 
-  --card: #0b0b0b;
-  --card-foreground: #fafafa;
+  --card: #0b1118;
+  --card-foreground: #f3f7fd;
 
-  --popover: #0b0b0b;
-  --popover-foreground: #fafafa;
+  --popover: #0b1118;
+  --popover-foreground: #f3f7fd;
 
-  --primary: #ffffff;
-  --primary-foreground: #050505;
+  --primary: #f3f7fd;
+  --primary-foreground: #070a0f;
 
-  --secondary: #181818;
-  --secondary-foreground: #fafafa;
+  --secondary: #121a24;
+  --secondary-foreground: #f3f7fd;
 
-  --muted: #181818;
-  --muted-foreground: #a1a1aa;
+  --muted: #131b25;
+  --muted-foreground: #a5b2c2;
 
-  --accent: #202020;
-  --accent-foreground: #fafafa;
+  --accent: #1a2633;
+  --accent-foreground: #eef6ff;
 
   --destructive: #d4d4d8;
 
-  --border: rgb(255 255 255 / 10%);
-  --input: rgb(255 255 255 / 12%);
-  --ring: #a1a1aa;
+  --border: rgb(207 226 248 / 11%);
+  --input: rgb(207 226 248 / 14%);
+  --ring: #bfdfff;
 
-  --chart-1: #fafafa;
-  --chart-2: #a1a1aa;
-  --chart-3: #71717a;
-  --chart-4: #52525b;
-  --chart-5: #27272a;
+  --chart-1: #f3f7fd;
+  --chart-2: #a5b9d0;
+  --chart-3: #7e98b5;
+  --chart-4: #586e87;
+  --chart-5: #2a394a;
 
   --radius: 1rem;
 
-  --sidebar: #0b0b0b;
-  --sidebar-foreground: #fafafa;
+  --sidebar: #0b1118;
+  --sidebar-foreground: #f3f7fd;
 
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #050505;
+  --sidebar-primary: #f3f7fd;
+  --sidebar-primary-foreground: #070a0f;
 
-  --sidebar-accent: #181818;
-  --sidebar-accent-foreground: #fafafa;
+  --sidebar-accent: #121a24;
+  --sidebar-accent-foreground: #f3f7fd;
 
-  --sidebar-border: rgb(255 255 255 / 10%);
-  --sidebar-ring: #a1a1aa;
+  --sidebar-border: rgb(207 226 248 / 11%);
+  --sidebar-ring: #bfdfff;
 }
 
 
@@ -107,10 +107,12 @@
     @apply bg-background text-foreground;
     min-width: 320px;
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 6%) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 6%) 1px, transparent 1px);
-    background-size: 56px 56px;
-    background-position: center top;
+      radial-gradient(ellipse 70% 38% at 50% 0%, rgb(91 139 197 / 12%), transparent 70%),
+      linear-gradient(to right, rgb(202 224 255 / 3%) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(202 224 255 / 3%) 1px, transparent 1px);
+    background-size: 100% 720px, 56px 56px, 56px 56px;
+    background-position: center top, center top, center top;
+    background-repeat: no-repeat, repeat, repeat;
   }
   html {
     @apply font-sans;
@@ -120,12 +122,12 @@
 }
 
 ::selection {
-  background: rgb(255 255 255 / 90%);
-  color: #050505;
+  background: #dcefff;
+  color: #070a0f;
 }
 
 :focus-visible {
-  outline-color: #ffffff;
+  outline-color: #dcefff;
 }
 
 @media (prefers-reduced-motion: reduce) {

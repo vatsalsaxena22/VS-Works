@@ -11,7 +11,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/8 bg-transparent">
+    <footer className="relative overflow-hidden border-t border-white/8 bg-background">
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-20 lg:px-10">
         <div className="grid gap-12 border-b border-white/8 pb-14 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>

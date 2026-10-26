@@ -3,7 +3,7 @@ import { ArrowUpRight, CodeXml, Mail, MessageSquareText } from "lucide-react";
 import Container from "@/components/layout/Container";
 
 const cardClassName =
-  "group rounded-2xl border border-white/[0.08] bg-[#0a0a0a] p-6 transition duration-300 hover:border-white/20 hover:bg-[#0c0c0c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:p-7";
+  "group rounded-2xl border border-white/[0.08] bg-[#0a0f15] p-6 transition duration-300 hover:border-white/20 hover:bg-[#101820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:p-7";
 
 export default function ContactMethods() {
   return (

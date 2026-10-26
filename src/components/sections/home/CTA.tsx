@@ -7,7 +7,7 @@ export default function CTA() {
   return (
     <section className="py-24 sm:py-32">
       <Container>
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b0b0b] p-7 sm:p-10 md:p-14">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0c121a] p-7 sm:p-10 md:p-14">
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(130deg,rgba(255,255,255,0.035),transparent_55%)]" />
           <div className="relative grid items-center gap-3 md:grid-cols-[1fr_0.72fr] md:gap-8">
             <div className="relative z-10 max-w-4xl">

@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="pb-24 sm:pb-32">
         <Container>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/[0.09] bg-[#0b0b0b] sm:rounded-[2rem]">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/[0.09] bg-[#0c121a] sm:rounded-[2rem]">
             <Image
               src={project.image}
               alt={project.imageAlt}
@@ -99,7 +99,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </p>
             </div>
 
-            <aside className="space-y-8 rounded-[1.5rem] border border-white/[0.08] bg-[#0a0a0a] p-6 sm:p-8">
+            <aside className="space-y-8 rounded-[1.5rem] border border-white/[0.08] bg-[#0a0f15] p-6 sm:p-8">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600">Discipline</p>
                 <p className="mt-3 text-sm font-medium text-white">{project.category}</p>

@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" fill="none">
   <defs>
     <radialGradient id="haze" cx="0" cy="0" r="1" gradientTransform="matrix(270 0 0 270 320 320)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8D5BFF" stop-opacity=".38"/>
-      <stop offset=".46" stop-color="#1CC8C2" stop-opacity=".16"/>
-      <stop offset="1" stop-color="#080808" stop-opacity="0"/>
+      <stop stop-color="#7898C7" stop-opacity=".34"/>
+      <stop offset=".46" stop-color="#7AC4D0" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#080c12" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="orbit" x1="101" y1="191" x2="548" y2="454" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFB65C"/>
-      <stop offset=".45" stop-color="#FF5F92"/>
-      <stop offset="1" stop-color="#8F7BFF"/>
+      <stop stop-color="#D8ECFF"/>
+      <stop offset=".45" stop-color="#8FCFF0"/>
+      <stop offset="1" stop-color="#A8BFEF"/>
     </linearGradient>
     <linearGradient id="orbitTwo" x1="140" y1="456" x2="496" y2="180" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#33D5C6"/>
-      <stop offset=".52" stop-color="#64A9FF"/>
-      <stop offset="1" stop-color="#B27BFF"/>
+      <stop stop-color="#7CD9DE"/>
+      <stop offset=".52" stop-color="#8DC8F5"/>
+      <stop offset="1" stop-color="#D4E6FF"/>
     </linearGradient>
     <linearGradient id="core" x1="246" y1="227" x2="408" y2="416" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFD176"/>
-      <stop offset=".48" stop-color="#FB6E9E"/>
-      <stop offset="1" stop-color="#9575FF"/>
+      <stop stop-color="#E7F4FF"/>
+      <stop offset=".48" stop-color="#A9D9EE"/>
+      <stop offset="1" stop-color="#B9C8F5"/>
     </linearGradient>
     <filter id="softGlow" x="108" y="108" width="424" height="424" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
       <feGaussianBlur stdDeviation="23"/>
@@ -38,9 +38,9 @@
   <circle cx="320" cy="320" r="78" fill="#101010" stroke="url(#orbit)" stroke-width="2"/>
   <circle cx="320" cy="320" r="58" fill="url(#core)"/>
   <circle cx="320" cy="320" r="28" fill="#fff" fill-opacity=".88"/>
-  <circle cx="452" cy="207" r="8" fill="#FFD176"/>
-  <circle cx="171" cy="393" r="7" fill="#49D4C5"/>
-  <circle cx="405" cy="491" r="6" fill="#A284FF"/>
-  <circle cx="494" cy="370" r="5" fill="#FF6A9A"/>
+  <circle cx="452" cy="207" r="8" fill="#E7F4FF"/>
+  <circle cx="171" cy="393" r="7" fill="#7CD9DE"/>
+  <circle cx="405" cy="491" r="6" fill="#A8BFEF"/>
+  <circle cx="494" cy="370" r="5" fill="#B9D8F4"/>
   <path d="M453 207h39m-321 186h-37m271 98 18 29m71-150 34 10" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

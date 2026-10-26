@@ -86,7 +86,7 @@ export default function ContactForm() {
           <form
             ref={formRef}
             onSubmit={sendEmail}
-            className="space-y-5 rounded-[1.5rem] border border-white/[0.09] bg-[#0a0a0a] p-5 sm:p-8"
+            className="space-y-5 rounded-[1.5rem] border border-white/[0.09] bg-[#0a0f15] p-5 sm:p-8"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
@@ -100,7 +100,7 @@ export default function ContactForm() {
                   autoComplete="name"
                   required
                   placeholder="Name"
-                  className="w-full rounded-xl border border-white/[0.1] bg-[#070707] px-4 py-3.5 text-sm text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
+                  className="w-full rounded-xl border border-white/[0.1] bg-[#080c12] px-4 py-3.5 text-sm text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export default function ContactForm() {
                   autoComplete="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full rounded-xl border border-white/[0.1] bg-[#070707] px-4 py-3.5 text-sm text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
+                  className="w-full rounded-xl border border-white/[0.1] bg-[#080c12] px-4 py-3.5 text-sm text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
                 />
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function ContactForm() {
                 name="project_type"
                 defaultValue=""
                 required
-                className="w-full rounded-xl border border-white/[0.1] bg-[#070707] px-4 py-3.5 text-sm text-zinc-300 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
+                className="w-full rounded-xl border border-white/[0.1] bg-[#080c12] px-4 py-3.5 text-sm text-zinc-300 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
               >
                 <option value="" disabled>
                   Choose a starting point
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 minLength={12}
                 required
                 placeholder="What problem are you trying to solve? What would a good outcome look like?"
-                className="w-full resize-y rounded-xl border border-white/[0.1] bg-[#070707] px-4 py-3.5 text-sm leading-6 text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
+                className="w-full resize-y rounded-xl border border-white/[0.1] bg-[#080c12] px-4 py-3.5 text-sm leading-6 text-white placeholder:text-zinc-600 outline-none transition focus:border-white/50 focus:ring-2 focus:ring-white/10"
               />
             </div>
 
