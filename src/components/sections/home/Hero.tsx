@@ -38,29 +38,12 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255,255,255,0.075) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255,255,255,0.075) 1px, transparent 1px)
-            `,
-            backgroundSize: "56px 56px",
-            maskImage:
-              "linear-gradient(to bottom, black 0%, black 65%, transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, black 0%, black 65%, transparent 100%)",
-          }}
-        />
-
         {/* Ambient lighting */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(255,255,255,0.055),transparent_60%)]" />
 
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#080a0d]/20 to-transparent" />
 
-        {/* Technical corner details */}
-        <div className="absolute left-6 top-28 size-2 border-l border-t border-white/30 sm:left-10 lg:left-16" />
-        <div className="absolute right-6 top-28 size-2 border-r border-t border-white/30 sm:right-10 lg:right-16" />
+
       </div>
 
       <Container>
@@ -107,7 +90,7 @@ export default function Hero() {
                   className="group inline-flex min-h-12 items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#080808] transition duration-300 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 >
                   Explore our work
-                  <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:tranzinc-x-1 group-hover:-tranzinc-y-1" />
                 </Link>
 
                 <Link
@@ -238,7 +221,7 @@ export default function Hero() {
               className="group mt-5 inline-flex items-center gap-2 px-2 text-xs text-zinc-500 transition hover:text-white focus-visible:outline-2 focus-visible:outline-white"
             >
               Discover selected work
-              <ArrowDown className="size-3.5 transition-transform group-hover:translate-y-0.5" />
+              <ArrowDown className="size-3.5 transition-transform group-hover:tranzinc-y-0.5" />
             </Link>
           </FadeIn>
         </div>

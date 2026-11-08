@@ -16,7 +16,7 @@ export default function WorksGrid() {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section className="pb-24 sm:pb-32" aria-label="Project portfolio">
+    <section className="py-24 sm:py-32" aria-label="Project portfolio">
       <Container>
         <div className="mb-8 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
@@ -45,7 +45,7 @@ export default function WorksGrid() {
           </p>
         </div>
 
-        <div className="grid auto-rows-fr gap-5 lg:grid-cols-2 lg:gap-6">
+        <div className="grid auto-rows-fr gap-5 lg:grid-cols-3 lg:gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.slug} {...project} />
           ))}

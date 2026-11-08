@@ -27,12 +27,12 @@ export default function ProjectCard({
       aria-label={`View the ${title} case study`}
       className="group block h-full overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[#0a0f15] transition duration-500 hover:-translate-y-1 hover:border-white/25 hover:bg-[#101820] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#101820]">
+      <div className="relative aspect-16/8 overflow-hidden bg-[#101820]">
         <Image
           src={image}
           alt={imageAlt}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           unoptimized
           className="object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
         />

@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="pb-24 sm:pb-32">
         <Container>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/[0.09] bg-[#0c121a] sm:rounded-[2rem]">
+          <div className="relative aspect-16/8 overflow-hidden rounded-[1.5rem] border border-white/[0.09] bg-[#0c121a] sm:rounded-[2rem]">
             <Image
               src={project.image}
               alt={project.imageAlt}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const navItems = [
   { name: "Work", href: "/works" },
@@ -16,6 +16,49 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const sidebarRef = useRef<HTMLElement>(null);
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+    menuButtonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        return;
+      }
+
+      if (event.key !== "Tab" || !sidebarRef.current) return;
+
+      const focusable = sidebarRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])',
+      );
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [closeMenu, menuOpen]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === href : pathname.startsWith(href);
@@ -27,7 +70,7 @@ export default function Navbar() {
           href="/"
           aria-label="VSW Research and Development home"
           className="group flex items-center gap-3 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-          onClick={() => setMenuOpen(false)}
+          onClick={closeMenu}
         >
           <Image
             src="/imgs/logo.png"
@@ -84,24 +127,50 @@ export default function Navbar() {
         </button>
       </div>
 
-      <nav
-        id="mobile-navigation"
-        aria-label="Mobile navigation"
-        aria-hidden={!menuOpen}
-        onKeyDown={(event) => {
-          if (event.key === "Escape") {
-            event.preventDefault();
-            setMenuOpen(false);
-            menuButtonRef.current?.focus();
-          }
-        }}
-        className={`overflow-hidden border-t border-white/8 bg-[#080c12] transition-[max-height,opacity] duration-300 md:hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 border-t-transparent opacity-0"
+      <div
+        className={`fixed inset-0 z-[60] md:hidden ${
+          menuOpen ? "visible" : "invisible pointer-events-none"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl flex-col px-5 py-3 sm:px-8">
-          {[{ name: "Home", href: "/" }, ...navItems, { name: "Contact", href: "/hire" }].map(
-            (item) => {
+        <button
+          type="button"
+          aria-label="Close navigation menu"
+          tabIndex={menuOpen ? 0 : -1}
+          onClick={() => setMenuOpen(false)}
+          className={`absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        <aside
+          ref={sidebarRef}
+          id="mobile-navigation"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+          aria-hidden={!menuOpen}
+          className={`fixed right-0 top-0 z-[70] flex h-dvh w-[min(88vw,24rem)] flex-col border-l border-white/15 !bg-black px-6 pb-8 pt-5 shadow-2xl shadow-black/60 transition-transform duration-300 ease-out ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between border-b border-white/10 pb-5">
+            <span className="text-xs font-medium uppercase tracking-[0.24em] text-zinc-400">
+              Navigation
+            </span>
+            <button
+              ref={closeButtonRef}
+              type="button"
+              aria-label="Close menu"
+              tabIndex={menuOpen ? 0 : -1}
+              onClick={closeMenu}
+              className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-white/35 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <X className="size-5" />
+            </button>
+          </div>
+
+          <nav aria-label="Mobile navigation" className="flex flex-1 flex-col py-7">
+            {[{ name: "Home", href: "/" }, ...navItems].map((item, index) => {
               const active = isActive(item.href);
 
               return (
@@ -110,18 +179,31 @@ export default function Navbar() {
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   tabIndex={menuOpen ? 0 : -1}
-                  onClick={() => setMenuOpen(false)}
-                  className={`rounded-xl px-3 py-3 text-sm transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-white ${
-                    active ? "text-white" : "text-zinc-300"
+                  onClick={closeMenu}
+                  className={`flex items-center justify-between border-b border-white/10 py-5 text-2xl font-medium tracking-tight transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-white ${
+                    active ? "text-white" : "text-zinc-400"
                   }`}
                 >
-                  {item.name}
+                  <span>{item.name}</span>
+                  <span className="text-xs tracking-[0.16em] text-zinc-600">
+                    0{index + 1}
+                  </span>
                 </Link>
               );
-            },
-          )}
-        </div>
-      </nav>
+            })}
+          </nav>
+
+          <Link
+            href="/hire"
+            tabIndex={menuOpen ? 0 : -1}
+            onClick={closeMenu}
+            className="group inline-flex min-h-12 items-center justify-between rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            Start a project
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </aside>
+      </div>
     </header>
   );
 }

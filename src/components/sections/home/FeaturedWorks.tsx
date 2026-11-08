@@ -32,8 +32,8 @@ export default function FeaturedWorks() {
           </div>
         </FadeIn>
 
-        <div className="grid auto-rows-fr gap-5 lg:grid-cols-2 lg:gap-6">
-          {projects.slice(0, 2).map((project, index) => (
+        <div className="grid auto-rows-fr gap-5 lg:grid-cols-3 lg:gap-6">
+          {projects.slice(0, 3).map((project, index) => (
             <FadeIn key={project.slug} delay={index * 0.1} className="h-full">
               <ProjectCard {...project} />
             </FadeIn>
